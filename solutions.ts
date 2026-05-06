@@ -25,6 +25,17 @@ const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
   return obj[key];
 };
 
+//todo: Problem 5
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+const toggleReadStatus = (book: Book): Book & { isRead: boolean } => {
+  return { ...book, isRead: true };
+};
+
+
 //todo: Problem 6
 class Person {
   name: string;
@@ -48,7 +59,6 @@ class Student extends Person {
     return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
   }
 }
-
 
 //todo: Problem 7
 const getIntersection = (arr1: number[], arr2: number[]): number[] => {
