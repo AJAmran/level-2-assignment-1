@@ -80,7 +80,7 @@ student1.introduce();
 - maintenance সহজ হয়
 - future এ নতুন feature add করা সহজ হয়
 
-#### Real Project Example
+### Real Project Example
 
 ধরুন একটি school management system আছে।
 
@@ -94,10 +94,13 @@ login()
 তখন আমরা একটি base Person class বানাতে পারি।
 
 তারপর:
+```ts
 
 class Student extends Person {}
 class Teacher extends Person {}
 class Admin extends Person {}
+
+```
 
 এভাবে project অনেক organized এবং reusable হয়।
 
@@ -157,7 +160,7 @@ Abstraction মানে:
 
 unnecessary details hide করে শুধু important অংশ দেখানো।
 
-Real life example:
+### Real life example:
 
 আমরা গাড়ি চালানোর সময় engine কিভাবে কাজ করে সেটা জানি না।
 আমরা শুধু steering, brake আর accelerator ব্যবহার করি।
@@ -182,17 +185,15 @@ Payment class শুধু rule তৈরি করেছে।
 
 মানে:
 
-“সব payment system-এর pay method থাকতে হবে।”
-
-কিন্তু actual implementation child class করবে।
-
-কেন Abstraction দরকার?
+- “সব payment system-এর pay method থাকতে হবে।”
+- কিন্তু actual implementation child class করবে।
+- কেন Abstraction দরকার?
 
 কারণ এটি:
 
-project structure clean রাখে
-developer confusion কমায়
-large application manage করা সহজ করে
+- project structure clean রাখে
+- developer confusion কমায়
+- large application manage করা সহজ করে
 
 ## Encapsulation
 Encapsulation মানে:
@@ -225,8 +226,9 @@ console.log(account.getBalance());
 কারণ আমরা চাই না কেউ বাইরে থেকে balance change করতে পারুক।
 
 যদি কেউ এমন করে:
-
+```ts
 account.balance = 100000;
+```
 
 তাহলে TypeScript error দিবে।
 
