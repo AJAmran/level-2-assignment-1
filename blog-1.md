@@ -1,6 +1,6 @@
-## Why is `any` a “Type Safety Hole” and Why is `unknown` Safer in TypeScript?
+# Why is `any` a “Type Safety Hole” and Why is `unknown` Safer in TypeScript?
 
-# Introduction:
+## Introduction:
 
 TypeScript আমাদের JavaScript কোডকে আরো ‍safe & predictable করতে সাহায্য করে।
 
@@ -22,7 +22,7 @@ TypeScript আমাদের JavaScript কোডকে আরো ‍safe & pre
 
 ---
 
-# What is 'any' ?
+## What is 'any' ?
 
 "any" মানে typeScript কে বলা হয়
 
@@ -40,7 +40,7 @@ data = true;
 
 এখানে typeScript কোন error দিচ্ছে না কারণ any ব্যবাহরের কারণে type checking বন্ধ হয়ে যায়।
 
-# Why is any Called a “Type Safety Hole”?
+## Why is any Called a “Type Safety Hole”?
 
 কারণ any typeScript-এর safety system bypass করে দেয়।
 
@@ -67,7 +67,7 @@ TypeError: userInput.toUpperCase is not a function
 “Type Safety Hole”
 কারণ এটি type safety ভেঙে 
 
-# What is unknown?
+## What is unknown?
 unknown হলো safer version of any.
 
 খানে TypeScript বলে:
@@ -81,7 +81,7 @@ console.log(value.toUpperCase());
 value' is of type 'unknown'.ts
 কারণ আগে type check করতে হবে।
 
-# Why is unknown Safer?
+## Why is unknown Safer?
 কারণ unknown force করে type checking করতে।
 
 ```ts
@@ -95,7 +95,7 @@ if (typeof value === "string") {
 
 কারণ আমরা আগে confirm করেছি এটি string।
 
-# What is Type Narrowing?
+## What is Type Narrowing?
 Type Narrowing মানে:
 
 একটি unknown বা multiple type থেকে exact type identify করা।
@@ -148,7 +148,7 @@ if (typeof response === "object" && response !== null) {
 ## any vs unknown
 Sure! Here is the comparison table for any and unknown in Markdown format, optimized for your .md file:
 
-| Feature [1, 2, 3, 4, 5] | any | unknown |
+| Feature | any | unknown |
 |---|---|---|
 | Assignability | Can assign any value to it | Can assign any value to it |
 | Usage Safety | No type checks required (Unsafe) | Requires type checks or type casting (Safe) |
